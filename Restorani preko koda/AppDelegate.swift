@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let tabBar = TabBarController()
+        //Boja navigation bara
+        UINavigationBar.appearance().barTintColor = UIColor(red: 77/255, green: 230/255, blue: 152/255, alpha: 1)
+        //Ovde se postavlja boja text navigation bar
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+
+        //Statu bar da bude beo
+        application.statusBarStyle = .lightContent
+        
+        window?.rootViewController = tabBar
+        
         return true
     }
 

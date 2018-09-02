@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		895FEC8A3D91F25C2304EBF3 /* Pods_Restorani_preko_koda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0642F21EBB1003BDB8269F61 /* Pods_Restorani_preko_koda.framework */; };
 		DA3DCC28213BFDA10098B952 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC27213BFDA10098B952 /* AppDelegate.swift */; };
-		DA3DCC2A213BFDA10098B952 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC29213BFDA10098B952 /* ViewController.swift */; };
-		DA3DCC2D213BFDA10098B952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3DCC2B213BFDA10098B952 /* Main.storyboard */; };
+		DA3DCC2A213BFDA10098B952 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC29213BFDA10098B952 /* TabBarController.swift */; };
 		DA3DCC2F213BFDA20098B952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3DCC2E213BFDA20098B952 /* Assets.xcassets */; };
 		DA3DCC32213BFDA20098B952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3DCC30213BFDA20098B952 /* LaunchScreen.storyboard */; };
+		DA3DCC3A213BFFAC0098B952 /* LounchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC39213BFFAC0098B952 /* LounchViewController.swift */; };
+		DA3DCC3C213BFFC20098B952 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */; };
+		DA3DCC3E213C476C0098B952 /* RestauranCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC3D213C476C0098B952 /* RestauranCell.swift */; };
+		DA3DCC40213C690B0098B952 /* Objekat za netvorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0642F21EBB1003BDB8269F61 /* Pods_Restorani_preko_koda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restorani_preko_koda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81C1690B82F858EDC3DD92FE /* Pods-Restorani preko koda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restorani preko koda.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restorani preko koda/Pods-Restorani preko koda.release.xcconfig"; sourceTree = "<group>"; };
 		DA3DCC24213BFDA10098B952 /* Restorani preko koda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restorani preko koda.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3DCC27213BFDA10098B952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA3DCC29213BFDA10098B952 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA3DCC2C213BFDA10098B952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA3DCC29213BFDA10098B952 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DA3DCC2E213BFDA20098B952 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA3DCC31213BFDA20098B952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA3DCC33213BFDA20098B952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA3DCC39213BFFAC0098B952 /* LounchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LounchViewController.swift; sourceTree = "<group>"; };
+		DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
+		DA3DCC3D213C476C0098B952 /* RestauranCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestauranCell.swift; sourceTree = "<group>"; };
+		DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Objekat za netvorking.swift"; sourceTree = "<group>"; };
+		DB907660A3450F34E98D0BD4 /* Pods-Restorani preko koda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restorani preko koda.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restorani preko koda/Pods-Restorani preko koda.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895FEC8A3D91F25C2304EBF3 /* Pods_Restorani_preko_koda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B399666A59A34C897F756D61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB907660A3450F34E98D0BD4 /* Pods-Restorani preko koda.debug.xcconfig */,
+				81C1690B82F858EDC3DD92FE /* Pods-Restorani preko koda.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DA3DCC1B213BFDA10098B952 = {
 			isa = PBXGroup;
 			children = (
 				DA3DCC26213BFDA10098B952 /* Restorani preko koda */,
 				DA3DCC25213BFDA10098B952 /* Products */,
+				B399666A59A34C897F756D61 /* Pods */,
+				F9C30889BD974D8E2DDE97AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +77,24 @@
 			isa = PBXGroup;
 			children = (
 				DA3DCC27213BFDA10098B952 /* AppDelegate.swift */,
-				DA3DCC29213BFDA10098B952 /* ViewController.swift */,
-				DA3DCC2B213BFDA10098B952 /* Main.storyboard */,
-				DA3DCC2E213BFDA20098B952 /* Assets.xcassets */,
+				DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */,
+				DA3DCC29213BFDA10098B952 /* TabBarController.swift */,
+				DA3DCC39213BFFAC0098B952 /* LounchViewController.swift */,
+				DA3DCC3D213C476C0098B952 /* RestauranCell.swift */,
+				DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */,
 				DA3DCC30213BFDA20098B952 /* LaunchScreen.storyboard */,
 				DA3DCC33213BFDA20098B952 /* Info.plist */,
+				DA3DCC2E213BFDA20098B952 /* Assets.xcassets */,
 			);
 			path = "Restorani preko koda";
+			sourceTree = "<group>";
+		};
+		F9C30889BD974D8E2DDE97AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0642F21EBB1003BDB8269F61 /* Pods_Restorani_preko_koda.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA3DCC36213BFDA20098B952 /* Build configuration list for PBXNativeTarget "Restorani preko koda" */;
 			buildPhases = (
+				44CAF3D8BA412D56D217E04B /* [CP] Check Pods Manifest.lock */,
 				DA3DCC20213BFDA10098B952 /* Sources */,
 				DA3DCC21213BFDA10098B952 /* Frameworks */,
 				DA3DCC22213BFDA10098B952 /* Resources */,
+				30DD38D82ABEA2A9D018A4C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,33 +159,69 @@
 			files = (
 				DA3DCC32213BFDA20098B952 /* LaunchScreen.storyboard in Resources */,
 				DA3DCC2F213BFDA20098B952 /* Assets.xcassets in Resources */,
-				DA3DCC2D213BFDA10098B952 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30DD38D82ABEA2A9D018A4C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Restorani preko koda/Pods-Restorani preko koda-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Restorani preko koda/Pods-Restorani preko koda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44CAF3D8BA412D56D217E04B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Restorani preko koda-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA3DCC20213BFDA10098B952 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA3DCC2A213BFDA10098B952 /* ViewController.swift in Sources */,
+				DA3DCC2A213BFDA10098B952 /* TabBarController.swift in Sources */,
 				DA3DCC28213BFDA10098B952 /* AppDelegate.swift in Sources */,
+				DA3DCC40213C690B0098B952 /* Objekat za netvorking.swift in Sources */,
+				DA3DCC3A213BFFAC0098B952 /* LounchViewController.swift in Sources */,
+				DA3DCC3C213BFFC20098B952 /* InternetViewController.swift in Sources */,
+				DA3DCC3E213C476C0098B952 /* RestauranCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA3DCC2B213BFDA10098B952 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA3DCC2C213BFDA10098B952 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DA3DCC30213BFDA20098B952 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -278,6 +349,7 @@
 		};
 		DA3DCC37213BFDA20098B952 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB907660A3450F34E98D0BD4 /* Pods-Restorani preko koda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +367,7 @@
 		};
 		DA3DCC38213BFDA20098B952 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81C1690B82F858EDC3DD92FE /* Pods-Restorani preko koda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

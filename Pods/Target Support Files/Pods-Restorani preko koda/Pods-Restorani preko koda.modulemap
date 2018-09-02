@@ -1,0 +1,6 @@
+framework module Pods_Restorani_preko_koda {
+  umbrella header "Pods-Restorani preko koda-umbrella.h"
+
+  export *
+  module * { export * }
+}
