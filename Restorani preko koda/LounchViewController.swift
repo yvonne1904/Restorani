@@ -58,6 +58,9 @@ class LounchViewController: UIViewController {
     
     @objc func addTapped() {
         print("klik klik")
+        
+       // let mapVC = Mapview()
+       // self.present(mapVC ,animated: true , completion: nil)
     }
     //Ova funkcija radi sav networking
     func networkingFetchData() {
@@ -102,6 +105,8 @@ extension LounchViewController: UICollectionViewDelegateFlowLayout , UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("OPA")
+        let mapView = MapView()
+        self.navigationController?.pushViewController(mapView, animated: true)
     }
     
 }

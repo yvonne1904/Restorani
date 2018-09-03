@@ -16,6 +16,7 @@
 		DA3DCC3C213BFFC20098B952 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */; };
 		DA3DCC3E213C476C0098B952 /* RestauranCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC3D213C476C0098B952 /* RestauranCell.swift */; };
 		DA3DCC40213C690B0098B952 /* Objekat za netvorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */; };
+		DA3DCC42213D72D60098B952 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC41213D72D60098B952 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
 		DA3DCC3D213C476C0098B952 /* RestauranCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestauranCell.swift; sourceTree = "<group>"; };
 		DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Objekat za netvorking.swift"; sourceTree = "<group>"; };
+		DA3DCC41213D72D60098B952 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DB907660A3450F34E98D0BD4 /* Pods-Restorani preko koda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restorani preko koda.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restorani preko koda/Pods-Restorani preko koda.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */,
 				DA3DCC29213BFDA10098B952 /* TabBarController.swift */,
 				DA3DCC39213BFFAC0098B952 /* LounchViewController.swift */,
+				DA3DCC41213D72D60098B952 /* MapView.swift */,
 				DA3DCC3D213C476C0098B952 /* RestauranCell.swift */,
 				DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */,
 				DA3DCC30213BFDA20098B952 /* LaunchScreen.storyboard */,
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3DCC42213D72D60098B952 /* MapView.swift in Sources */,
 				DA3DCC2A213BFDA10098B952 /* TabBarController.swift in Sources */,
 				DA3DCC28213BFDA10098B952 /* AppDelegate.swift in Sources */,
 				DA3DCC40213C690B0098B952 /* Objekat za netvorking.swift in Sources */,
