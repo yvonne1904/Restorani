@@ -18,5 +18,14 @@ struct Restaurants : Codable {
     let name : String?
     let backgroundImageURL : String?
     let category : String?
-    
+    let contact: Contact?
+    let location: Location?
+}
+
+struct Contact: Codable {
+    let phone: String?
+}
+
+struct Location: Codable {
+    let address: String?
 }

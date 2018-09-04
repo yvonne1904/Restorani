@@ -10,14 +10,38 @@ import UIKit
 import MapKit
 
 class MapView: UIViewController {
-
+    
+    // 1) Prvo pravimo promenljivu tipa Restoran tj onog tipa iz koga treba da dobijemo podatke
+    var restaraurant: Restaurants? {
+        didSet {
+            if let name = restaraurant?.name {
+                restaurantName.text = name
+            }
+            
+            if let category = restaraurant?.category {
+                categoryType.text = category
+            }
+            
+            if let phone = restaraurant?.contact?.phone {
+                phoneNumber.text = phone
+            }
+            if let adress = restaraurant?.location?.address {
+                adressLabel.text = adress
+            }
+        }
+    }
+    
+    let topHalfContainer: UIView = {
+        let view = UIView()
+        view.backgroundColor = .cyan
+        return view
+    }()
+    
     let topContainer : UIView = {
         let view = UIView()
         view.backgroundColor = .red
         return view
     }()
-    
-    //mapa unutar top container
     
     let mapView: MKMapView = {
         let mv = MKMapView()
@@ -29,6 +53,11 @@ class MapView: UIViewController {
         view.backgroundColor = .green
         return view
     }()
+    
+    //mapa unutar top container
+    
+   
+    
     let restaurantName : UILabel = {
         let label = UILabel()
         label.text = "Restaurant Name"
@@ -50,7 +79,7 @@ class MapView: UIViewController {
         view.backgroundColor = .white
         return view
     }()
-    let adress : UILabel = {
+    let adressLabel: UILabel = {
         let label = UILabel()
         label.text = "Restaurant adress"
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -71,7 +100,6 @@ class MapView: UIViewController {
         label.textColor = .black
         return label
     }()
-
     
     
     override func viewDidLoad() {
@@ -81,37 +109,49 @@ class MapView: UIViewController {
     
     func setupViews() {
         view.backgroundColor = .purple
-        view.addSubview(topContainer)
+        
+        view.addSubview(topHalfContainer)
+        
+        topHalfContainer.addSubview(topContainer)
         topContainer.addSubview(mapView)
-        view.addSubview(middleContainer)
+        topHalfContainer.addSubview(middleContainer)
+        
         middleContainer.addSubview(restaurantName)
         middleContainer.addSubview(categoryType)
+        
         view.addSubview(bottomContainer)
-        bottomContainer.addSubview(adress)
+        
+        bottomContainer.addSubview(adressLabel)
         bottomContainer.addSubview(phoneNumber)
         bottomContainer.addSubview(socialNetwork)
         
+        //top half container
+        topHalfContainer.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: view.frame.size.height / 2)
         
-        
+        // topcontainer
         topContainer.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 280)
         
         mapView.anchor(topContainer.topAnchor, left: topContainer.leftAnchor, bottom: topContainer.bottomAnchor, right: topContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
+        //middle container
         middleContainer.anchor(topContainer.bottomAnchor, left: topContainer.leftAnchor, bottom: nil, right: topContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 100)
         
-        restaurantName.anchor(middleContainer.topAnchor, left: middleContainer.leftAnchor, bottom: nil, right: middleContainer.rightAnchor, topConstant: 50, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        categoryType.anchor(restaurantName.topAnchor, left: middleContainer.leftAnchor, bottom: nil, right: middleContainer.rightAnchor, topConstant: 30, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        restaurantName.anchor(middleContainer.topAnchor, left: middleContainer.leftAnchor, bottom: nil, right: middleContainer.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 50)
+        
+        categoryType.anchor(restaurantName.bottomAnchor, left: middleContainer.leftAnchor, bottom: nil, right: middleContainer.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 50)
         
         
         bottomContainer.anchor(middleContainer.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         
-        adress.anchor(bottomContainer.topAnchor , left: bottomContainer.leftAnchor , bottom: nil, right: bottomContainer.rightAnchor , topConstant: 16, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26 )
+        adressLabel.anchor(bottomContainer.topAnchor , left: bottomContainer.leftAnchor , bottom: nil, right: bottomContainer.rightAnchor , topConstant: 16, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26 )
         
-        phoneNumber.anchor(adress.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26 )
+        phoneNumber.anchor(adressLabel.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26 )
         
         socialNetwork.anchor(phoneNumber.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26)
+        
         
     }
     

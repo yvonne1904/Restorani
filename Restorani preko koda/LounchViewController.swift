@@ -105,7 +105,11 @@ extension LounchViewController: UICollectionViewDelegateFlowLayout , UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("OPA")
+        // 2) pravimo promenljivu date klase tj kontrolera sa kojim hocemo kontakt
         let mapView = MapView()
+        //3 ssad imamo pristup onoj promenljivoj koju smo napravili i iznednacavamo je sa objektom sad iz ove klase tj kontrolera i dodajemo na to indexPath da bi znali na koji je restoran tj celiju tacno kliknuto i ja kad ovo citam ne razumem :(
+        mapView.restaraurant = object?.restaurants[indexPath.item]
+        //4) idemo na taj kontroler zajedno sa poslatim podacima
         self.navigationController?.pushViewController(mapView, animated: true)
     }
     
