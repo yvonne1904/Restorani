@@ -44,6 +44,12 @@ class MapView: UIViewController {
         label.textColor = .white
         return label
     }()
+ 
+    let bottomContainer : UIView = {
+        let view = UIView()
+        view.backgroundColor = .brown
+        return view
+    }()
     
     
     override func viewDidLoad() {
@@ -58,6 +64,7 @@ class MapView: UIViewController {
         view.addSubview(middleContainer)
         middleContainer.addSubview(restaurantName)
         middleContainer.addSubview(categoryType)
+        view.addSubview(bottomContainer)
         
         
         
@@ -70,6 +77,9 @@ class MapView: UIViewController {
         restaurantName.anchor(middleContainer.topAnchor, left: middleContainer.leftAnchor, bottom: nil, right: middleContainer.rightAnchor, topConstant: 50, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         categoryType.anchor(restaurantName.topAnchor, left: middleContainer.leftAnchor, bottom: nil, right: middleContainer.rightAnchor, topConstant: 30, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        
+        bottomContainer.anchor(middleContainer.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
     
     
