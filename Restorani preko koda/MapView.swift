@@ -47,9 +47,31 @@ class MapView: UIViewController {
  
     let bottomContainer : UIView = {
         let view = UIView()
-        view.backgroundColor = .brown
+        view.backgroundColor = .white
         return view
     }()
+    let adress : UILabel = {
+        let label = UILabel()
+        label.text = "Restaurant adress"
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textColor = .black
+        return label
+    }()
+    let phoneNumber : UILabel = {
+        let label = UILabel()
+        label.text = "Phone number"
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textColor = .black
+        return label
+    }()
+    let socialNetwork : UILabel = {
+        let label = UILabel()
+        label.text = "Social network"
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textColor = .black
+        return label
+    }()
+
     
     
     override func viewDidLoad() {
@@ -65,6 +87,9 @@ class MapView: UIViewController {
         middleContainer.addSubview(restaurantName)
         middleContainer.addSubview(categoryType)
         view.addSubview(bottomContainer)
+        bottomContainer.addSubview(adress)
+        bottomContainer.addSubview(phoneNumber)
+        bottomContainer.addSubview(socialNetwork)
         
         
         
@@ -80,6 +105,14 @@ class MapView: UIViewController {
         
         
         bottomContainer.anchor(middleContainer.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        
+        adress.anchor(bottomContainer.topAnchor , left: bottomContainer.leftAnchor , bottom: nil, right: bottomContainer.rightAnchor , topConstant: 16, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26 )
+        
+        phoneNumber.anchor(adress.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26 )
+        
+        socialNetwork.anchor(phoneNumber.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26)
+        
     }
     
     
