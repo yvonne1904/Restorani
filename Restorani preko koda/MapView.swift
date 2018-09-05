@@ -34,6 +34,7 @@ class MapView: UIViewController {
     let topHalfContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .cyan
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -45,6 +46,8 @@ class MapView: UIViewController {
     
     let mapView: MKMapView = {
         let mv = MKMapView()
+        mv.clipsToBounds = true
+        mv.contentMode = .scaleAspectFit
         return mv
     }()
     
@@ -55,9 +58,6 @@ class MapView: UIViewController {
     }()
     
     //mapa unutar top container
-    
-   
-    
     let restaurantName : UILabel = {
         let label = UILabel()
         label.text = "Restaurant Name"
@@ -102,10 +102,13 @@ class MapView: UIViewController {
     }()
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
     }
+    var topHalfContainerHeight: NSLayoutConstraint?
     
     func setupViews() {
         view.backgroundColor = .purple
@@ -126,22 +129,23 @@ class MapView: UIViewController {
         bottomContainer.addSubview(socialNetwork)
         
         //top half container
-        topHalfContainer.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: view.frame.size.height / 2)
+        topHalfContainer.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        topHalfContainerHeight = topHalfContainer.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5)
+        topHalfContainerHeight?.isActive = true
         
         // topcontainer
-        topContainer.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 280)
+        
+        topContainer.anchor(topHalfContainer.topAnchor, left: topHalfContainer.leftAnchor, bottom: middleContainer.topAnchor, right: topHalfContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         mapView.anchor(topContainer.topAnchor, left: topContainer.leftAnchor, bottom: topContainer.bottomAnchor, right: topContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         //middle container
-        middleContainer.anchor(topContainer.bottomAnchor, left: topContainer.leftAnchor, bottom: nil, right: topContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 100)
+        middleContainer.anchor(nil, left: topHalfContainer.leftAnchor, bottom: topHalfContainer.bottomAnchor, right: topHalfContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 60)
         
+        restaurantName.anchor(middleContainer.topAnchor, left: middleContainer.leftAnchor, bottom: nil, right: middleContainer.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30)
         
-        
-        restaurantName.anchor(middleContainer.topAnchor, left: middleContainer.leftAnchor, bottom: nil, right: middleContainer.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 50)
-        
-        categoryType.anchor(restaurantName.bottomAnchor, left: middleContainer.leftAnchor, bottom: nil, right: middleContainer.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 50)
-        
+        categoryType.anchor(restaurantName.bottomAnchor, left: middleContainer.leftAnchor, bottom: nil, right: middleContainer.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 30)
         
         bottomContainer.anchor(middleContainer.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         

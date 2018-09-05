@@ -59,8 +59,8 @@ class LounchViewController: UIViewController {
     @objc func addTapped() {
         print("klik klik")
         
-       // let mapVC = Mapview()
-       // self.present(mapVC ,animated: true , completion: nil)
+        let allRestauranVC = AllRestarantsController()
+        self.navigationController?.pushViewController(allRestauranVC, animated: true)
     }
     //Ova funkcija radi sav networking
     func networkingFetchData() {

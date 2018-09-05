@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import MapKit
 
-class BigMap: UIViewController {
 
+class AllRestarantsController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      
+        view.backgroundColor = .blue
+        
     }
-
-   
-    }
+    
+    
+}
     
 
 
