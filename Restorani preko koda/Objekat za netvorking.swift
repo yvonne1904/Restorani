@@ -24,8 +24,11 @@ struct Restaurants : Codable {
 
 struct Contact: Codable {
     let phone: String?
+    let twitter: String?
 }
 
 struct Location: Codable {
     let address: String?
 }
+
+

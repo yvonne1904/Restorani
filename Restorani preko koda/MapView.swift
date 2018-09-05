@@ -28,6 +28,12 @@ class MapView: UIViewController {
             if let adress = restaraurant?.location?.address {
                 adressLabel.text = adress
             }
+            if let twitter = restaraurant?.contact?.twitter {
+                socialNetwork.text = twitter
+            
+                
+                
+            }
         }
     }
     
@@ -73,7 +79,8 @@ class MapView: UIViewController {
         label.textColor = .white
         return label
     }()
- 
+    
+    
     let bottomContainer : UIView = {
         let view = UIView()
         view.backgroundColor = .white
