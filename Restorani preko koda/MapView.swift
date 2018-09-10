@@ -37,6 +37,12 @@ class MapView: UIViewController {
         }
     }
     
+    
+  
+    
+    
+    
+
     let topHalfContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .cyan
