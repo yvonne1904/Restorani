@@ -23,7 +23,9 @@ class LounchViewController: UIViewController {
     lazy var restaurantCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .yellow
+        cv.backgroundColor = .white
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
         cv.delegate = self
         cv.dataSource = self
         return cv
@@ -53,12 +55,10 @@ class LounchViewController: UIViewController {
     func setupNavigationBar() {
         //ona mapa desno gore u navigation baru
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
-        navigationItem.rightBarButtonItem?.image = UIImage(named:"icon_map")
+        navigationItem.rightBarButtonItem?.image = UIImage(named:"icon_map")?.withRenderingMode(.alwaysOriginal)
     }
-    
+  
     @objc func addTapped() {
-        print("klik klik")
-        
         let allRestauranVC = AllRestarantsController()
         self.navigationController?.pushViewController(allRestauranVC, animated: true)
     }
@@ -104,7 +104,6 @@ extension LounchViewController: UICollectionViewDelegateFlowLayout , UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("OPA")
         // 2) pravimo promenljivu date klase tj kontrolera sa kojim hocemo kontakt
         let mapView = MapView()
         //3 ssad imamo pristup onoj promenljivoj koju smo napravili i iznednacavamo je sa objektom sad iz ove klase tj kontrolera i dodajemo na to indexPath da bi znali na koji je restoran tj celiju tacno kliknuto i ja kad ovo citam ne razumem :(
@@ -112,5 +111,4 @@ extension LounchViewController: UICollectionViewDelegateFlowLayout , UICollectio
         //4) idemo na taj kontroler zajedno sa poslatim podacima
         self.navigationController?.pushViewController(mapView, animated: true)
     }
-    
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		895FEC8A3D91F25C2304EBF3 /* Pods_Restorani_preko_koda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0642F21EBB1003BDB8269F61 /* Pods_Restorani_preko_koda.framework */; };
+		DA2685612142FC6C004C6F14 /* TreciKontroler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2685602142FC6C004C6F14 /* TreciKontroler.swift */; };
 		DA3DCC28213BFDA10098B952 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC27213BFDA10098B952 /* AppDelegate.swift */; };
 		DA3DCC2A213BFDA10098B952 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC29213BFDA10098B952 /* TabBarController.swift */; };
 		DA3DCC2F213BFDA20098B952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3DCC2E213BFDA20098B952 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		0642F21EBB1003BDB8269F61 /* Pods_Restorani_preko_koda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restorani_preko_koda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C1690B82F858EDC3DD92FE /* Pods-Restorani preko koda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restorani preko koda.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restorani preko koda/Pods-Restorani preko koda.release.xcconfig"; sourceTree = "<group>"; };
+		DA2685602142FC6C004C6F14 /* TreciKontroler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreciKontroler.swift; sourceTree = "<group>"; };
 		DA3DCC24213BFDA10098B952 /* Restorani preko koda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restorani preko koda.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3DCC27213BFDA10098B952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA3DCC29213BFDA10098B952 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -84,10 +86,11 @@
 				DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */,
 				DA3DCC29213BFDA10098B952 /* TabBarController.swift */,
 				DA3DCC39213BFFAC0098B952 /* LounchViewController.swift */,
+				DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */,
 				DA3DCC43213EF8EB0098B952 /* AllRestarantsController.swift */,
 				DA3DCC41213D72D60098B952 /* MapView.swift */,
 				DA3DCC3D213C476C0098B952 /* RestauranCell.swift */,
-				DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */,
+				DA2685602142FC6C004C6F14 /* TreciKontroler.swift */,
 				DA3DCC30213BFDA20098B952 /* LaunchScreen.storyboard */,
 				DA3DCC33213BFDA20098B952 /* Info.plist */,
 				DA3DCC2E213BFDA20098B952 /* Assets.xcassets */,
@@ -218,6 +221,7 @@
 			files = (
 				DA3DCC42213D72D60098B952 /* MapView.swift in Sources */,
 				DA3DCC2A213BFDA10098B952 /* TabBarController.swift in Sources */,
+				DA2685612142FC6C004C6F14 /* TreciKontroler.swift in Sources */,
 				DA3DCC28213BFDA10098B952 /* AppDelegate.swift in Sources */,
 				DA3DCC40213C690B0098B952 /* Objekat za netvorking.swift in Sources */,
 				DA3DCC3A213BFFAC0098B952 /* LounchViewController.swift in Sources */,

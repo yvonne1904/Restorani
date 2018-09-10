@@ -18,6 +18,7 @@ class TabBarController: UITabBarController {
     func setupViews() {
         view.backgroundColor = .blue
         tabBar.barTintColor = UIColor(r: 42, g: 42, b: 42)
+        
         let louncVC = LounchViewController()
         louncVC.title = "Lounch"
         let lunchNavigation = UINavigationController(rootViewController: louncVC)
