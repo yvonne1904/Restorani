@@ -13,15 +13,12 @@ class AllRestarantsController: UIViewController, MKMapViewDelegate  {
     
     let allMapView : MKMapView = {
         let mv = MKMapView()
-        
-        
         return mv
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(allMapView)
-        
         
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
         let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(34.096924 , 118.249216)
@@ -34,8 +31,6 @@ class AllRestarantsController: UIViewController, MKMapViewDelegate  {
         annotation.subtitle = "Come visit me here!"
         allMapView.addAnnotation(annotation)
        
-        
-        
         allMapView.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right:view.rightAnchor , topConstant: 0, leftConstant: 0  , bottomConstant: 0, rightConstant: 0 , widthConstant: 0, heightConstant: 0)
     }
 }

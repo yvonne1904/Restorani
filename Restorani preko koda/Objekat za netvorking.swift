@@ -29,6 +29,8 @@ struct Contact: Codable {
 
 struct Location: Codable {
     let address: String?
+    let lat: Double?
+    let lng: Double?
 }
 
 

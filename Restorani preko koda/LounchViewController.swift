@@ -9,7 +9,6 @@
 import UIKit
 import LBTAComponents
 
-
 class LounchViewController: UIViewController {
     
     var object: Object? {
@@ -30,7 +29,6 @@ class LounchViewController: UIViewController {
         cv.dataSource = self
         return cv
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,8 +105,16 @@ extension LounchViewController: UICollectionViewDelegateFlowLayout , UICollectio
         // 2) pravimo promenljivu date klase tj kontrolera sa kojim hocemo kontakt
         let mapView = MapView()
         //3 ssad imamo pristup onoj promenljivoj koju smo napravili i iznednacavamo je sa objektom sad iz ove klase tj kontrolera i dodajemo na to indexPath da bi znali na koji je restoran tj celiju tacno kliknuto i ja kad ovo citam ne razumem :(
+//        let latitude = object?.restaurants[indexPath.item].location?.lat
+//        let longitude = object?.restaurants[indexPath.item].location?.lng 
+//            print("latitude je \(latitude)")
+//            print("longitude je \(longitude)")
+//            //2 koram pozivamo napraljenu fuknciju. Ona sada trazi da se popune ta dva argumenta, tipa Double, i mi ih dobijamo iz Objekta za networking, lat i lng. Pre toga se uradi samo provera if let da app ne crashuje.
+//        mapView.getCoordinatesData(latitude: latitude!, longitude: longitude!)
+        
         mapView.restaraurant = object?.restaurants[indexPath.item]
         //4) idemo na taj kontroler zajedno sa poslatim podacima
-        self.navigationController?.pushViewController(mapView, animated: true)
+        
+      self.navigationController?.pushViewController(mapView, animated: true)
     }
 }

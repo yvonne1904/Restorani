@@ -17,11 +17,11 @@ class MapView: UIViewController {
             if let name = restaraurant?.name {
                 restaurantName.text = name
             }
-            
+
             if let category = restaraurant?.category {
                 categoryType.text = category
             }
-            
+
             if let phone = restaraurant?.contact?.phone {
                 phoneNumber.text = phone
             }
@@ -30,19 +30,18 @@ class MapView: UIViewController {
             }
             if let twitter = restaraurant?.contact?.twitter {
                 socialNetwork.text = twitter
-            
-                
-                
             }
+
+//            if let lat = restaraurant?.location?.lat, let lng = restaraurant?.location?.lng {
+//                print("latitude je \(lat)")
+//                print("longitude je \(lng)")
+//                self.getCoordinatesData(latitude: lat, longitude: lng)
+//            }
         }
     }
     
+//    var restoran: Restaurants?
     
-  
-    
-    
-    
-
     let topHalfContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .cyan
@@ -97,6 +96,8 @@ class MapView: UIViewController {
         label.text = "Restaurant adress"
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .red
         return label
     }()
     let phoneNumber : UILabel = {
@@ -104,28 +105,28 @@ class MapView: UIViewController {
         label.text = "Phone number"
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     let socialNetwork : UILabel = {
         let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Social network"
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = .black
         return label
     }()
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
     }
     var topHalfContainerHeight: NSLayoutConstraint?
+    var adressLabelHeight: NSLayoutConstraint?
+    var phoneNumberHeight: NSLayoutConstraint?
     
     func setupViews() {
         view.backgroundColor = .purple
-        
         view.addSubview(topHalfContainer)
         
         topHalfContainer.addSubview(topContainer)
@@ -162,17 +163,20 @@ class MapView: UIViewController {
         
         bottomContainer.anchor(middleContainer.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
+        adressLabel.anchor(bottomContainer.topAnchor , left: bottomContainer.leftAnchor , bottom: nil, right: bottomContainer.rightAnchor , topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0 )
         
-        adressLabel.anchor(bottomContainer.topAnchor , left: bottomContainer.leftAnchor , bottom: nil, right: bottomContainer.rightAnchor , topConstant: 16, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26 )
+        adressLabelHeight = adressLabel.heightAnchor.constraint(equalTo: bottomContainer.heightAnchor, multiplier: 0.25)
+        adressLabelHeight?.isActive = true
         
-        phoneNumber.anchor(adressLabel.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26 )
+        phoneNumber.anchor(adressLabel.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0 )
         
-        socialNetwork.anchor(phoneNumber.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26)
+        phoneNumberHeight = phoneNumber.heightAnchor.constraint(equalTo: bottomContainer.heightAnchor, multiplier: 0.25)
+        phoneNumberHeight?.isActive = true
         
+        socialNetwork.anchor(phoneNumber.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26)
         
     }
-    
-    
+
 }
 
 
