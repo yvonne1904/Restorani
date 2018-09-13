@@ -31,7 +31,12 @@ class MapView: UIViewController {
             if let twitter = restaraurant?.contact?.twitter {
                 socialNetwork.text = twitter
             }
-
+            if let postalCode = restaraurant?.location?.address{
+                postalCodeLbl.text = postalCode
+               
+            }
+            
+            
 //            if let lat = restaraurant?.location?.lat, let lng = restaraurant?.location?.lng {
 //                print("latitude je \(lat)")
 //                print("longitude je \(lng)")
@@ -97,7 +102,7 @@ class MapView: UIViewController {
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .red
+        label.backgroundColor = .white
         return label
     }()
     let phoneNumber : UILabel = {
@@ -116,6 +121,14 @@ class MapView: UIViewController {
         label.textColor = .black
         return label
     }()
+    var postalCodeLbl : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Postal Code"
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textColor = .black
+        return label
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,6 +137,7 @@ class MapView: UIViewController {
     var topHalfContainerHeight: NSLayoutConstraint?
     var adressLabelHeight: NSLayoutConstraint?
     var phoneNumberHeight: NSLayoutConstraint?
+    var postalCodeHeight : NSLayoutConstraint?
     
     func setupViews() {
         view.backgroundColor = .purple
@@ -141,6 +155,7 @@ class MapView: UIViewController {
         bottomContainer.addSubview(adressLabel)
         bottomContainer.addSubview(phoneNumber)
         bottomContainer.addSubview(socialNetwork)
+        bottomContainer.addSubview(postalCodeLbl)
         
         //top half container
         topHalfContainer.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
@@ -174,6 +189,11 @@ class MapView: UIViewController {
         phoneNumberHeight?.isActive = true
         
         socialNetwork.anchor(phoneNumber.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26)
+        
+        postalCodeLbl.anchor(socialNetwork.bottomAnchor, left: bottomContainer.leftAnchor, bottom: nil, right: bottomContainer.rightAnchor, topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 26)
+        
+        postalCodeHeight = postalCodeLbl.heightAnchor.constraint(equalTo: bottomContainer.heightAnchor, multiplier: 0.25)
+        postalCodeHeight?.isActive = true
         
     }
 
