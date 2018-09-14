@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		895FEC8A3D91F25C2304EBF3 /* Pods_Restorani_preko_koda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0642F21EBB1003BDB8269F61 /* Pods_Restorani_preko_koda.framework */; };
 		DA2685612142FC6C004C6F14 /* TreciKontroler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2685602142FC6C004C6F14 /* TreciKontroler.swift */; };
+		DA268581214B0EE5004C6F14 /* LounchTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268580214B0EE5004C6F14 /* LounchTwoController.swift */; };
+		DA268583214B1124004C6F14 /* LounchTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268582214B1124004C6F14 /* LounchTwoCell.swift */; };
 		DA3DCC28213BFDA10098B952 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC27213BFDA10098B952 /* AppDelegate.swift */; };
 		DA3DCC2A213BFDA10098B952 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC29213BFDA10098B952 /* TabBarController.swift */; };
 		DA3DCC2F213BFDA20098B952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3DCC2E213BFDA20098B952 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		0642F21EBB1003BDB8269F61 /* Pods_Restorani_preko_koda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restorani_preko_koda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C1690B82F858EDC3DD92FE /* Pods-Restorani preko koda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restorani preko koda.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restorani preko koda/Pods-Restorani preko koda.release.xcconfig"; sourceTree = "<group>"; };
 		DA2685602142FC6C004C6F14 /* TreciKontroler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreciKontroler.swift; sourceTree = "<group>"; };
+		DA268580214B0EE5004C6F14 /* LounchTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LounchTwoController.swift; sourceTree = "<group>"; };
+		DA268582214B1124004C6F14 /* LounchTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LounchTwoCell.swift; sourceTree = "<group>"; };
 		DA3DCC24213BFDA10098B952 /* Restorani preko koda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restorani preko koda.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3DCC27213BFDA10098B952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA3DCC29213BFDA10098B952 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,50 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DA268584214B1217004C6F14 /* LounchController */ = {
+			isa = PBXGroup;
+			children = (
+				DA3DCC39213BFFAC0098B952 /* LounchViewController.swift */,
+				DA3DCC3D213C476C0098B952 /* RestauranCell.swift */,
+			);
+			path = LounchController;
+			sourceTree = "<group>";
+		};
+		DA268585214B1222004C6F14 /* InternetsController */ = {
+			isa = PBXGroup;
+			children = (
+				DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */,
+			);
+			path = InternetsController;
+			sourceTree = "<group>";
+		};
+		DA268586214B122A004C6F14 /* PosleObrisiController */ = {
+			isa = PBXGroup;
+			children = (
+				DA268580214B0EE5004C6F14 /* LounchTwoController.swift */,
+				DA268582214B1124004C6F14 /* LounchTwoCell.swift */,
+			);
+			path = PosleObrisiController;
+			sourceTree = "<group>";
+		};
+		DA268587214B124D004C6F14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA268588214B1276004C6F14 /* Ostalo */ = {
+			isa = PBXGroup;
+			children = (
+				DA3DCC2E213BFDA20098B952 /* Assets.xcassets */,
+				DA3DCC27213BFDA10098B952 /* AppDelegate.swift */,
+				DA3DCC30213BFDA20098B952 /* LaunchScreen.storyboard */,
+			);
+			path = Ostalo;
+			sourceTree = "<group>";
+		};
 		DA3DCC1B213BFDA10098B952 = {
 			isa = PBXGroup;
 			children = (
@@ -82,18 +130,16 @@
 		DA3DCC26213BFDA10098B952 /* Restorani preko koda */ = {
 			isa = PBXGroup;
 			children = (
-				DA3DCC27213BFDA10098B952 /* AppDelegate.swift */,
-				DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */,
+				DA268587214B124D004C6F14 /* Model */,
+				DA268586214B122A004C6F14 /* PosleObrisiController */,
+				DA268585214B1222004C6F14 /* InternetsController */,
+				DA268584214B1217004C6F14 /* LounchController */,
 				DA3DCC29213BFDA10098B952 /* TabBarController.swift */,
-				DA3DCC39213BFFAC0098B952 /* LounchViewController.swift */,
-				DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */,
 				DA3DCC43213EF8EB0098B952 /* AllRestarantsController.swift */,
 				DA3DCC41213D72D60098B952 /* MapView.swift */,
-				DA3DCC3D213C476C0098B952 /* RestauranCell.swift */,
 				DA2685602142FC6C004C6F14 /* TreciKontroler.swift */,
-				DA3DCC30213BFDA20098B952 /* LaunchScreen.storyboard */,
+				DA268588214B1276004C6F14 /* Ostalo */,
 				DA3DCC33213BFDA20098B952 /* Info.plist */,
-				DA3DCC2E213BFDA20098B952 /* Assets.xcassets */,
 			);
 			path = "Restorani preko koda";
 			sourceTree = "<group>";
@@ -226,12 +272,14 @@
 			files = (
 				DA3DCC42213D72D60098B952 /* MapView.swift in Sources */,
 				DA3DCC2A213BFDA10098B952 /* TabBarController.swift in Sources */,
+				DA268581214B0EE5004C6F14 /* LounchTwoController.swift in Sources */,
 				DA2685612142FC6C004C6F14 /* TreciKontroler.swift in Sources */,
 				DA3DCC28213BFDA10098B952 /* AppDelegate.swift in Sources */,
 				DA3DCC40213C690B0098B952 /* Objekat za netvorking.swift in Sources */,
 				DA3DCC3A213BFFAC0098B952 /* LounchViewController.swift in Sources */,
 				DA3DCC3C213BFFC20098B952 /* InternetViewController.swift in Sources */,
 				DA3DCC3E213C476C0098B952 /* RestauranCell.swift in Sources */,
+				DA268583214B1124004C6F14 /* LounchTwoCell.swift in Sources */,
 				DA3DCC44213EF8EC0098B952 /* AllRestarantsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

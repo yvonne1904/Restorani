@@ -27,9 +27,16 @@ class TabBarController: UITabBarController {
         louncVC.navigationItem.title = "Internet"
         lunchNavigation.title = "Lounch"
         
+        let obrisiVC = LounchTwoController()
+        obrisiVC.title = "Obrisi"
+        let obrisiNavigation = UINavigationController(rootViewController: obrisiVC)
+        obrisiVC.tabBarItem.image = UIImage(named: "tab_lunch")?.withRenderingMode(.alwaysTemplate)
+        obrisiVC.tabBarItem.selectedImage = UIImage(named: "tab_lunch")?.withRenderingMode(.alwaysOriginal)
+        obrisiVC.navigationItem.title = "Obrisi"
+        obrisiNavigation.title = "Obrisi"
+        
         let internetVC = InternetViewController()
         internetVC.title = "Internet"
-    
         let intneretNavigation = UINavigationController(rootViewController: internetVC)
         internetVC.tabBarItem.image = UIImage(named: "tab_internets")?.withRenderingMode(.alwaysTemplate)
         internetVC.tabBarItem.selectedImage = UIImage(named: "tab_internets")?.withRenderingMode(.alwaysOriginal)
@@ -37,7 +44,7 @@ class TabBarController: UITabBarController {
         UITabBar.appearance().tintColor = .white
         intneretNavigation.title = "Internet"
         
-        viewControllers = [lunchNavigation, intneretNavigation]
+        viewControllers = [lunchNavigation, obrisiNavigation, intneretNavigation]
     }
     
 }

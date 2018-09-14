@@ -21,7 +21,7 @@ class AllRestarantsController: UIViewController, MKMapViewDelegate  {
         view.addSubview(allMapView)
         
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
-        let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(34.096924 , 118.249216)
+        let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(74.5 , -58.249216)
         let region : MKCoordinateRegion = MKCoordinateRegionMake(location, span)
         allMapView.setRegion(region, animated: true)
         

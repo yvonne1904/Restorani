@@ -31,6 +31,7 @@ struct Location: Codable {
     let address: String?
     let lat: Double?
     let lng: Double?
+    let postalCode : String?
 }
 
 
