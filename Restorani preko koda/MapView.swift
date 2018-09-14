@@ -172,6 +172,18 @@ class MapView: UIViewController, UITextFieldDelegate {
         return label
     }()
     
+    var oneButton : UIButton = {
+        let button = UIButton()
+        button.setTitle("$", for: .normal)
+        button.setTitleColor(UIColor.blue, for: .normal)
+        return button
+    }()
+//    var loginButton : UIButton = {
+//    loginButton = UIButton()
+//    loginButton.setTitle("Click", for: .normal)
+//    loginButton.bounds = view.bounds
+//    view.addSubview(loginButton)
+//    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -181,6 +193,7 @@ class MapView: UIViewController, UITextFieldDelegate {
     var phoneNumberHeight: NSLayoutConstraint?
     var socialNetworkHeight: NSLayoutConstraint?
     var postalCodeHeight : NSLayoutConstraint?
+    var oneButtonHeight : NSLayoutConstraint?
     var textfieldWidth: NSLayoutConstraint?
     
     var nekaSlikaWidth: NSLayoutConstraint?
@@ -208,6 +221,7 @@ class MapView: UIViewController, UITextFieldDelegate {
         bottomContainer.addSubview(textfield)
         textfield.delegate = self
         bottomContainer.addSubview(postalCodeLbl)
+        bottomContainer.addSubview(oneButton)
         
         //top half container
         topHalfContainer.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
@@ -255,6 +269,7 @@ class MapView: UIViewController, UITextFieldDelegate {
         postalCodeHeight = postalCodeLbl.heightAnchor.constraint(equalTo: bottomContainer.heightAnchor, multiplier: 0.20)
         postalCodeHeight?.isActive = true
         
+        
        dugme.anchor(phoneNumber.topAnchor, left: nil, bottom: phoneNumber.bottomAnchor, right: bottomContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 8, widthConstant: 0, heightConstant: 0)
         
         dugmeWidth = dugme.widthAnchor.constraint(equalTo: postalCodeLbl.heightAnchor, multiplier: 1)
@@ -264,13 +279,16 @@ class MapView: UIViewController, UITextFieldDelegate {
         
         textfieldWidth = textfield.widthAnchor.constraint(equalTo: socialNetwork.heightAnchor, multiplier: 1)
         textfieldWidth?.isActive = true
+        
+        oneButton.anchor(postalCodeLbl.topAnchor, left: nil, bottom: postalCodeLbl.bottomAnchor, right: bottomContainer.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 8, widthConstant: 0, heightConstant: 0)
+        
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textfield.resignFirstResponder()
         return true
     }
-
 }
 
 
