@@ -8,14 +8,14 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
     }
     
-    func setupViews() {
+    private func setupViews() {
         view.backgroundColor = .blue
         tabBar.barTintColor = UIColor(r: 42, g: 42, b: 42)
         
@@ -27,7 +27,7 @@ class TabBarController: UITabBarController {
         louncVC.navigationItem.title = "Internet"
         lunchNavigation.title = "Lounch"
         
-        let obrisiVC = LounchTwoController()
+        let obrisiVC = LunchTwoController()
         obrisiVC.title = "Obrisi"
         let obrisiNavigation = UINavigationController(rootViewController: obrisiVC)
         obrisiVC.tabBarItem.image = UIImage(named: "tab_lunch")?.withRenderingMode(.alwaysTemplate)

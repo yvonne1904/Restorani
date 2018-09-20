@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class InternetViewController: UIViewController {
+final class InternetViewController: UIViewController {
     
     let webViewJoka: WKWebView = {
         let wb = WKWebView()

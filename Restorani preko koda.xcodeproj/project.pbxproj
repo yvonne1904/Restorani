@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		895FEC8A3D91F25C2304EBF3 /* Pods_Restorani_preko_koda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0642F21EBB1003BDB8269F61 /* Pods_Restorani_preko_koda.framework */; };
-		DA2685612142FC6C004C6F14 /* TreciKontroler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2685602142FC6C004C6F14 /* TreciKontroler.swift */; };
-		DA268581214B0EE5004C6F14 /* LounchTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268580214B0EE5004C6F14 /* LounchTwoController.swift */; };
-		DA268583214B1124004C6F14 /* LounchTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268582214B1124004C6F14 /* LounchTwoCell.swift */; };
+		DA268581214B0EE5004C6F14 /* LunchTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268580214B0EE5004C6F14 /* LunchTwoController.swift */; };
+		DA268583214B1124004C6F14 /* LunchTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA268582214B1124004C6F14 /* LunchTwoCell.swift */; };
 		DA3DCC28213BFDA10098B952 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC27213BFDA10098B952 /* AppDelegate.swift */; };
 		DA3DCC2A213BFDA10098B952 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC29213BFDA10098B952 /* TabBarController.swift */; };
 		DA3DCC2F213BFDA20098B952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3DCC2E213BFDA20098B952 /* Assets.xcassets */; };
@@ -18,7 +17,7 @@
 		DA3DCC3A213BFFAC0098B952 /* LounchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC39213BFFAC0098B952 /* LounchViewController.swift */; };
 		DA3DCC3C213BFFC20098B952 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */; };
 		DA3DCC3E213C476C0098B952 /* RestauranCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC3D213C476C0098B952 /* RestauranCell.swift */; };
-		DA3DCC40213C690B0098B952 /* Objekat za netvorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */; };
+		DA3DCC40213C690B0098B952 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC3F213C690B0098B952 /* Restaurant.swift */; };
 		DA3DCC42213D72D60098B952 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC41213D72D60098B952 /* MapView.swift */; };
 		DA3DCC44213EF8EC0098B952 /* AllRestarantsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DCC43213EF8EB0098B952 /* AllRestarantsController.swift */; };
 /* End PBXBuildFile section */
@@ -26,9 +25,8 @@
 /* Begin PBXFileReference section */
 		0642F21EBB1003BDB8269F61 /* Pods_Restorani_preko_koda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restorani_preko_koda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C1690B82F858EDC3DD92FE /* Pods-Restorani preko koda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restorani preko koda.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restorani preko koda/Pods-Restorani preko koda.release.xcconfig"; sourceTree = "<group>"; };
-		DA2685602142FC6C004C6F14 /* TreciKontroler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreciKontroler.swift; sourceTree = "<group>"; };
-		DA268580214B0EE5004C6F14 /* LounchTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LounchTwoController.swift; sourceTree = "<group>"; };
-		DA268582214B1124004C6F14 /* LounchTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LounchTwoCell.swift; sourceTree = "<group>"; };
+		DA268580214B0EE5004C6F14 /* LunchTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchTwoController.swift; sourceTree = "<group>"; };
+		DA268582214B1124004C6F14 /* LunchTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchTwoCell.swift; sourceTree = "<group>"; };
 		DA3DCC24213BFDA10098B952 /* Restorani preko koda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restorani preko koda.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3DCC27213BFDA10098B952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA3DCC29213BFDA10098B952 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -38,7 +36,7 @@
 		DA3DCC39213BFFAC0098B952 /* LounchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LounchViewController.swift; sourceTree = "<group>"; };
 		DA3DCC3B213BFFC20098B952 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
 		DA3DCC3D213C476C0098B952 /* RestauranCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestauranCell.swift; sourceTree = "<group>"; };
-		DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Objekat za netvorking.swift"; sourceTree = "<group>"; };
+		DA3DCC3F213C690B0098B952 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		DA3DCC41213D72D60098B952 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DA3DCC43213EF8EB0098B952 /* AllRestarantsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRestarantsController.swift; sourceTree = "<group>"; };
 		DB907660A3450F34E98D0BD4 /* Pods-Restorani preko koda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restorani preko koda.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restorani preko koda/Pods-Restorani preko koda.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,19 +80,19 @@
 			path = InternetsController;
 			sourceTree = "<group>";
 		};
-		DA268586214B122A004C6F14 /* PosleObrisiController */ = {
+		DA268586214B122A004C6F14 /* LunchTwoContoller */ = {
 			isa = PBXGroup;
 			children = (
-				DA268580214B0EE5004C6F14 /* LounchTwoController.swift */,
-				DA268582214B1124004C6F14 /* LounchTwoCell.swift */,
+				DA268580214B0EE5004C6F14 /* LunchTwoController.swift */,
+				DA268582214B1124004C6F14 /* LunchTwoCell.swift */,
 			);
-			path = PosleObrisiController;
+			path = LunchTwoContoller;
 			sourceTree = "<group>";
 		};
 		DA268587214B124D004C6F14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DA3DCC3F213C690B0098B952 /* Objekat za netvorking.swift */,
+				DA3DCC3F213C690B0098B952 /* Restaurant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,13 +129,12 @@
 			isa = PBXGroup;
 			children = (
 				DA268587214B124D004C6F14 /* Model */,
-				DA268586214B122A004C6F14 /* PosleObrisiController */,
+				DA268586214B122A004C6F14 /* LunchTwoContoller */,
 				DA268585214B1222004C6F14 /* InternetsController */,
 				DA268584214B1217004C6F14 /* LounchController */,
 				DA3DCC29213BFDA10098B952 /* TabBarController.swift */,
-				DA3DCC43213EF8EB0098B952 /* AllRestarantsController.swift */,
 				DA3DCC41213D72D60098B952 /* MapView.swift */,
-				DA2685602142FC6C004C6F14 /* TreciKontroler.swift */,
+				DA3DCC43213EF8EB0098B952 /* AllRestarantsController.swift */,
 				DA268588214B1276004C6F14 /* Ostalo */,
 				DA3DCC33213BFDA20098B952 /* Info.plist */,
 			);
@@ -272,14 +269,13 @@
 			files = (
 				DA3DCC42213D72D60098B952 /* MapView.swift in Sources */,
 				DA3DCC2A213BFDA10098B952 /* TabBarController.swift in Sources */,
-				DA268581214B0EE5004C6F14 /* LounchTwoController.swift in Sources */,
-				DA2685612142FC6C004C6F14 /* TreciKontroler.swift in Sources */,
+				DA268581214B0EE5004C6F14 /* LunchTwoController.swift in Sources */,
 				DA3DCC28213BFDA10098B952 /* AppDelegate.swift in Sources */,
-				DA3DCC40213C690B0098B952 /* Objekat za netvorking.swift in Sources */,
+				DA3DCC40213C690B0098B952 /* Restaurant.swift in Sources */,
 				DA3DCC3A213BFFAC0098B952 /* LounchViewController.swift in Sources */,
 				DA3DCC3C213BFFC20098B952 /* InternetViewController.swift in Sources */,
 				DA3DCC3E213C476C0098B952 /* RestauranCell.swift in Sources */,
-				DA268583214B1124004C6F14 /* LounchTwoCell.swift in Sources */,
+				DA268583214B1124004C6F14 /* LunchTwoCell.swift in Sources */,
 				DA3DCC44213EF8EC0098B952 /* AllRestarantsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

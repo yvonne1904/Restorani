@@ -58,6 +58,7 @@ class LounchViewController: UIViewController {
   
     @objc func addTapped() {
         let allRestauranVC = AllRestarantsController()
+        allRestauranVC.restaurants = object?.restaurants
         self.navigationController?.pushViewController(allRestauranVC, animated: true)
     }
     //Ova funkcija radi sav networking

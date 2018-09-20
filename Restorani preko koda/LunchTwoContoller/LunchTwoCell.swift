@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LounchTwoCell: UICollectionViewCell {
+class LunchTwoCell: UICollectionViewCell {
     
     var restaurant: Restaurants? {
         didSet {

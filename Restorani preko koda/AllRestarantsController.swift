@@ -9,28 +9,52 @@
 import UIKit
 import MapKit
 
-class AllRestarantsController: UIViewController, MKMapViewDelegate  {
+final class AllRestarantsController: UIViewController, MKMapViewDelegate  {
     
-    let allMapView : MKMapView = {
+   private let allMapView : MKMapView = {
         let mv = MKMapView()
         return mv
     }()
+    
+    var restaurants: [Restaurants]?
+    var an = [MKPointAnnotation]()
+    
+    
+    let regionRadius : CLLocationDistance = 10000000
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
+         allMapView.setRegion(coordinateRegion, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(allMapView)
         
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
-        let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(74.5 , -58.249216)
-        let region : MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-        allMapView.setRegion(region, animated: true)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "PIN"
-        annotation.subtitle = "Come visit me here!"
-        allMapView.addAnnotation(annotation)
+        allMapView.delegate = self
+        setupMap()
+        allMapView.addAnnotations(an)
        
         allMapView.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right:view.rightAnchor , topConstant: 0, leftConstant: 0  , bottomConstant: 0, rightConstant: 0 , widthConstant: 0, heightConstant: 0)
+    }
+    
+    func setupMap() {
+        if let arrayOfRestaurants = restaurants {
+            for rest in arrayOfRestaurants {
+                if let lat = rest.location?.lat, let lang = rest.location?.lng {
+                    let cordinates : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: lat, longitude: lang)
+                    
+                    let region : MKCoordinateRegion =
+                    allMapView.regionThatFits(MKCoordinateRegionMakeWithDistance(cordinates, 500000, 500000))
+                    allMapView.setRegion(region, animated: true)
+                    
+                    let point = MKPointAnnotation()
+                    point.coordinate = cordinates
+                    point.title = rest.name
+                    point.subtitle = rest.category
+                    an.append(point)
+                }
+            }
+        }
     }
 }

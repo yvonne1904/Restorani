@@ -8,9 +8,6 @@
 
 import Foundation
 
-//za ntevorking objekat koji mora da se slaze sa jsonom koji dobijamo preko linka zbog da bi mogao na ispravan nacin da radi
-
-
 struct Object: Codable {
     let restaurants :[Restaurants]
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LounchTwoController: UIViewController {
+final class LunchTwoController: UIViewController {
     
     var object: Object? {
         didSet {
@@ -41,7 +41,7 @@ class LounchTwoController: UIViewController {
         //2 dodajemo ga u view
         view.addSubview(lounchTwoCollection)
         //4 registrujem tu celiju
-        lounchTwoCollection.register(LounchTwoCell.self, forCellWithReuseIdentifier: "cell")
+        lounchTwoCollection.register(LunchTwoCell.self, forCellWithReuseIdentifier: "cell")
         //5 stavljam konstreinte
         lounchTwoCollection.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
@@ -79,7 +79,7 @@ class LounchTwoController: UIViewController {
     }
 }
 
-extension LounchTwoController: UICollectionViewDelegateFlowLayout , UICollectionViewDelegate , UICollectionViewDataSource {
+extension LunchTwoController: UICollectionViewDelegateFlowLayout , UICollectionViewDelegate , UICollectionViewDataSource {
     // 6 koristim delegate i datasource func da bi popunio datu celiju
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let count = object?.restaurants.count {
@@ -90,7 +90,7 @@ extension LounchTwoController: UICollectionViewDelegateFlowLayout , UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //7 pravimo konkretnu celiju
-        let cell = lounchTwoCollection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! LounchTwoCell
+        let cell = lounchTwoCollection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! LunchTwoCell
         cell.restaurant = object?.restaurants[indexPath.item]
         return cell
     }

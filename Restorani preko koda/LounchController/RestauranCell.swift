@@ -9,10 +9,8 @@
 import UIKit
 import Kingfisher
 
-
-//3 pravimo celiju
 class RestaurantCell: UICollectionViewCell {
-    //ovde smo celiju popunili sa podatcima iz onog structa Restorani
+    
     var restaurant: Restaurants? {
         didSet {
             nameLabel.text = restaurant?.name
@@ -32,8 +30,7 @@ class RestaurantCell: UICollectionViewCell {
     
     let nameLabel : UILabel = {
         let label = UILabel()
-//        label.text = "ime restorana"
-        label.font =  UIFont.boldSystemFont(ofSize: 16)
+        label.font =  UIFont.boldSystemFont(ofSize: 18)
         label.textColor = .white
         return label
     }()
@@ -41,20 +38,18 @@ class RestaurantCell: UICollectionViewCell {
     let categoryLabel : UILabel = {
         let label = UILabel()
         label.text = "kategorija"
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: 15) 
         label.textColor = .white 
         return label
     }()
     
     
-    //napravila sam celiju za restoran koja ce da sadrzi elemente potrebne za restoran
-    //ovo je celijin viewDidLoad
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
     }
     
-    func setupViews() {
+    private func setupViews() {
         backgroundColor = .green
         addSubview(restaurantImageView)
         addSubview(nameLabel)
